@@ -1,0 +1,35 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="neuronGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00f0ff"/>
+      <stop offset="100%" stop-color="#0044ff"/>
+    </radialGradient>
+
+    <linearGradient id="linkGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f0ff"/>
+      <stop offset="100%" stop-color="#0044ff"/>
+    </linearGradient>
+
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <g stroke="url(#linkGradient)" stroke-width="1.5" stroke-opacity="0.8" fill="url(#neuronGradient)">
+    <path d="M15,40 C25,45 25,65 35,60" fill="none"/>
+    <path d="M15,60 C25,65 25,65 35,60" fill="none"/>
+    <path d="M15,80 C25,75 25,65 35,60" fill="none"/>
+    <path d="M35,60 C45,55 45,75 55,65" fill="none"/>
+    <path d="M35,60 C45,70 45,75 55,65" fill="none"/>
+
+    <circle cx="15" cy="40" r="4" filter="url(#glow)"/>
+    <circle cx="15" cy="60" r="4" filter="url(#glow)"/>
+    <circle cx="15" cy="80" r="4" filter="url(#glow)"/>
+    <circle cx="35" cy="60" r="4" filter="url(#glow)"/>
+    <circle cx="55" cy="65" r="4" filter="url(#glow)"/>
+  </g>
+</svg>
